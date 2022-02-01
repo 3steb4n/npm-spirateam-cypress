@@ -24,9 +24,8 @@ function callFunctionUpdateTestRun( stateTest, inputDate ) {
             throw { state: 400, message: "El parámetro idTestCase es requerido."};
         } else if ( !inputDate.idTestSet ) {
             throw { state: 400, message: "El parámetro idTestSet es requerido."};
-        } else if ( inputDate.testFallido === undefined ) {
-            throw { state: 400, message: "El parámetro testFallido es requerido."};
-        } else if ( stateTest === undefined || stateTest !== "failed" || stateTest !== "passed" ) {
+        } else if ( stateTest === undefined || ( stateTest != "failed" && stateTest != "passed" ) ) {
+            console.log( stateTest );
             throw { state: 400, message: "El parámetro stateTest es requerido." }
         } else {
             updateTestCaseTestRun( inputDate ).then( async ( arraySteps ) => {
