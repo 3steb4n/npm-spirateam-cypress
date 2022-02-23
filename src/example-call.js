@@ -5,10 +5,9 @@ const request = {
         username: "esteban.gomez",
         apiKey: "{D59E9599-001F-4DA1-B561-62133F60AA35}"
     },
+    stateTest: "failed",
     idProject: 37,
-    idRelease: 1880,
-    idTestCase: 29619,
-    idTestSet: 1621
+    idTestCase: 29619
 }
 
-callFunctionUpdateTestRun( "passed", request );
+callFunctionUpdateTestRun(request);
